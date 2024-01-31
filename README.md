@@ -4,7 +4,7 @@
 https://wp.me/PeZLar-6
 
 # 发布页之二:
-https://6malaka9.github.io
+https://github.com/6malaka9/6malaka9.github.io
 
 # 用户中心(Newest):
 https://hhss.space
