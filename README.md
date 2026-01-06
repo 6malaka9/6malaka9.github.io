@@ -10,7 +10,7 @@ https://github.com/6malaka9/6malaka9.github.io
 https://u.pcloud.link/publink/show?code=kZGeCh5ZyAaDYQbJk55AAr0FiornORtgzSM7
 
 # #4 用户中心
-https://kyssdh.lol
+https://kyssdh1.lol
 
 # 欢迎收藏本页地址,追踪并持续支持好好爽爽
 
