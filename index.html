@@ -7,88 +7,181 @@
 <script type="text/javascript" src="/temp.js"></script>
 <title>歡迎！此處是[好好爽爽]的發佈頁！</title>
 <style>
-		html{height:100%;}
+html {
+  height: 100%;
+  min-height: 100%;
+}
 body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  display: flex;
   justify-content: center;
-  align-content: center;
   align-items: center;
+  align-content: center;
   text-align: center;
-	  color: #fff;
-        display: flex;
-        background-image: linear-gradient(
-              -33deg, 
-              rgba(59,173,227,1) 0%, 
-              rgba(87,111,230,1) 25%, 
-              rgba(152,68,183,1) 51%, 
-              rgba(255,53,127,1) 100%
-        );  
-        animation: AnimateBG 20s ease infinite;
-      }
-      @keyframes AnimateBG { 
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-      }
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background: linear-gradient(    -33deg,    #3bade3 0%,    #576fe6 25%,    #9844b7 51%,    #ff357f 100%  );
+  background-size: 300% 300%;
+  animation: AnimateBG 20s ease infinite;
+  overflow-x: hidden;
+  position: relative;
+}
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .container {
+  width: min(100%, 420px);
   margin-top: 10px;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 20px 60px rgba(35, 15, 80, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
-a,a:link,a:visited,a:hover,a:active{
-    text-decoration: none;
-    color:inherit;
-}
-.offset {
-  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
-}
-.offset:hover, .offset:focus {
-  box-shadow: 0 0 0 0 var(--hover), inset 10em 4em 0 0 var(--hover);
+a,a:link,a:visited,a:hover,a:active {
+  text-decoration: none;
+  color: inherit;
 }
 .offset {
   --color: #4b91f1;
   --hover: #1973bc;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    5px 5px 0 0 var(--color),
+    inset 5px 5px 0 0 var(--color);
+  transition:
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
 }
-.offset a{
-	display: block;
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: 2px;
-	line-height: 2.875rem;
-  padding-top: 3.5px;
-		}
-		ul{
-			list-style-type:none;
-padding: 0 10px 10px;
-		}
+.offset:hover,
+.offset:focus {
+  box-shadow:
+    0 0 0 0 var(--hover),
+    inset 10em 4em 0 0 var(--hover);
+}
+.offset a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 2.875rem;
+  transition:
+    letter-spacing 0.3s ease,
+    color 0.3s ease;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10px 10px;
+}
 li {
-  background-color: #fff;
-  border: 2px solid;
-	border-radius: 5px;
+  max-width: 300px;
+  margin: 1.375rem auto 0;
+  background: rgba(255, 255, 255, 0.96);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
   font: inherit;
-	color: var(--color);
-  transition: 0.25s;
-max-width: 300px;
-margin: 1.375rem auto 0;
+  color: var(--color);
+  box-shadow: 0 6px 18px rgba(32, 30, 90, 0.10);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
-
-li:hover, li:focus {
+li:hover,
+li:focus-within {
   border-color: var(--hover);
   color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(35, 20, 90, 0.22);
 }
+li:hover .offset,
+li:focus-within .offset {
+  --hover: #1973bc;
+}
+li:hover .offset a,
+li:focus-within .offset a {
+  letter-spacing: 2.5px;
+}
+
 h1 {
-  font-weight: 400;
+  margin: 0 0 24px;
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  text-shadow: 0 4px 18px rgba(45, 20, 90, 0.18);
 }
 X {
-  color: #e4cb58;
+  color: #ffe58a;
   font: inherit;
-}	
-.foot {padding-bottom: 30px;}
-@media (max-width: 767px){
-.container {
-  width: 100%;
-}}
-@media (max-width: 320px){
-.container {
-  width: 100%;
-}}
+  text-shadow: 0 0 18px rgba(255, 229, 138, 0.35);
+}
+.foot {
+  padding-bottom: 30px;
+  opacity: 0.85;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+  .offset a {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    width: 100%;
+    padding: 24px 12px;
+  }
+  li {
+    margin-top: 1rem;
+  }
+  .offset a {
+    padding: 6px 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
 </style>
 </head>
 <body>
