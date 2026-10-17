@@ -10,7 +10,7 @@ github.com/6malaka9/6malaka9.github.io
 u.pcloud.link/publink/show?code=kZGeCh5ZyAaDYQbJk55AAr0FiornORtgzSM7
 
 # #4 用戶回轉中心
-www.loopbackcenter.website
+loopbackcenter.website
 
 # #5 奇怪的導航小站
 kyssdh2.lol
