@@ -1,1 +1,21 @@
-window[(14).toString(32)+(31).toString(32)+(10).toString(32)+(21).toString(32)](function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(x() {    x Z() {        x N(N) {            C ((x() { U v; })[\'G\'](\'r\')[\'B\'](\'t\')) {                U;            }            N(++N);        }        13 {            N(0);        } j (t) {            W(Z, 2);        }    }    Z();    17.f(\'F\', x(t) {        C (            t.E === 1 ||             (t.Q && t.X && (t.E === 5 || t.E === 6 || t.E === 4)) ||            (t.M && t.h && t.E === 5) // 9 的 p+7+8        ) {            t.S();            U v;        }    });    17.f(\'m\', x(t) {        t.S();    });})();(x() {    15 14 = {        \'p\': \'A://g.K.16\',        \'V\': \'A://Y.K.16\',        \'Q\': \'A://19.K.16\',        \'19\': \'A://1a.K.16\',        \'p\': \'A://18.L/b-3\',        \'G\': \'A://J.16\'    };    15 I = V.T(\'p[q-10]\');        w (15 B = 0; B < I.H; B++) {        I[B].f(\'k\', x(u) {            u.S();            15 D = 12.y(\'q-10\');            15 11 = 14[D];            C (11) {                17.R(11, \'c\', \'O,P\');            }        });    }})();',62,73,'|123|200|6|67|73|74|Command|I|Mac|Option|PeZLar|_blank|a|action|addEventListener|alpha|altKey|call|catch|click|constructor|contextmenu|crash|ctrlKey|d|data|debugger|document|e|event|false|for|function|getAttribute|go|https|i|if|key|keyCode|keydown|l|length|links|loopbackcenter|magiclinking|me|metaKey|n|noopener|noreferrer|o|open|preventDefault|querySelectorAll|return|s|setTimeout|shiftKey|sigma|startAntiDebug|target|targetUrl|this|try|urlMap|var|website|window|wp|z|zeta'.split('|'),0,{}))
+(function() {
+    var urlMap = {
+        'a': 'https://alpha.magiclinking.website',
+        's': 'https://sigma.magiclinking.website',
+        'o': 'https://go.magiclinking.website',
+        'z': 'https://zeta.magiclinking.website',
+        'd': 'https://wp.me/PeZLar-6',
+        'l': 'https://loopbackcenter.website'
+    };
+    var links = document.querySelectorAll('a[data-target]');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function(event) {
+            event.preventDefault();
+            var key = this.getAttribute('data-target');
+            var targetUrl = urlMap[key];
+            if (targetUrl) {
+                window.open(targetUrl, '_blank', 'noopener,noreferrer');
+            }
+        });
+    }
+})();
